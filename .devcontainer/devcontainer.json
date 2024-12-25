@@ -1,0 +1,28 @@
+{
+  "name": "C Development Container",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.trimTrailingWhitespace": false,
+        "files.insertFinalNewline": true,
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": false
+      },
+      "extensions": [
+        "ms-vscode.cpptools",                   // C/C++ extension
+        "ms-vscode.cpptools-extension-pack",    // C/C++ extension pack
+        "ms-vscode.cpptools-themes",            // C/C++ themes
+        "ms-vscode.cmake-tools",                // CMake extension
+        "ms-azuretools.vscode-docker",          // Docker extension
+        "secondfry.42header-long",              // 42 header extension
+        "ms-vscode.makefile-tools",             // Makefile extension
+        "github.vscode-github-actions",         // GitHub Actions extension
+		"github.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "gcc --version && echo 'welcome to C development container! 🎉'",
+  "runArgs": ["--hostname=c_dev"]
+}
