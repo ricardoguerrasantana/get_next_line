@@ -20,9 +20,11 @@ jobs:
       run:  sudo apt-get update && sudo apt-get install -y gcc make libcriterion-dev python3 python3-venv python3-pip python3-setuptools pipx
     # Install norminette
     - name: Install norminette
-      run: python3 -m venv /opt/venv && \
-        /opt/venv/bin/pip install --upgrade pip setuptools && \
-        /opt/venv/bin/pip install norminette
+      run: sudo apt update
+           sudo apt install python3-setuptools
+           sudo apt install pipx
+           pipx install norminette
+           pipx ensurepath
     # Test project
     - name: Run tests
       run: make test
