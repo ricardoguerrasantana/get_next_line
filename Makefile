@@ -59,7 +59,7 @@ re: fclean all
 
 # Norminette rule
 norm:
-	@norminette $(SRC) $(INCLUDE)
+	@norminette -R CheckForbiddenSourceHeader $(SRC) $(INCLUDE)
 
 # Test rule
 test: fclean $(NAME)
