@@ -6,7 +6,7 @@
 /*   By: ricguerr <ricguerr@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 06:46:05 by ricguerr          #+#    #+#             */
-/*   Updated: 2024/12/27 08:02:21 by ricguerr         ###   ########.fr       */
+/*   Updated: 2024/12/27 08:38:52 by ricguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ char	*get_next_line(int fd);
 size_t	ft_strlen(const char *str);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strchr(const char *s, int c);
 
 #endif
