@@ -6,7 +6,7 @@
 /*   By: ricguerr <ricguerr@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 06:49:27 by ricguerr          #+#    #+#             */
-/*   Updated: 2024/12/27 09:12:26 by ricguerr         ###   ########.fr       */
+/*   Updated: 2024/12/27 09:24:36 by ricguerr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,17 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	return (NULL);
+}
+
+char	*ft_strdup(const char *s)
+{
+	char	*dup;
+
+	if (!s)
+		return (NULL);
+	dup = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!dup)
+		return (NULL);
+	ft_strcpy(dup, s);
+	return (dup);
 }
